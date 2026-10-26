@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Previous content</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="archive.css"></head><body><div class="page" data-page="archive"><div class="col" style="max-width:100rem"><nav class="nav" aria-label="Pages"><a href="index.html">Today</a><a href="everything.html">Everything else today</a><a href="archive.html" aria-current="page">Previous content</a></nav>
+<h1>Previous content</h1>
+<p class="sub" id="sub"></p>
+<div class="panel">
+ <div class="panel-h"><div class="abar">
+  <label class="lbl">Law <select class="sel" id="law"></select></label>
+  <label class="lbl">Type <select class="sel" id="type"></select></label>
+  <label class="lbl">Group by <select class="sel" id="grp"><option value="">None</option><option value="area">Law</option><option value="kind">Type</option></select></label>
+ </div><div class="abar"><button class="btn" id="tg" aria-expanded="true">Hide filters</button><button class="btn" id="clr">Clear all</button></div></div>
+ <div class="grid" id="grid"></div>
+</div>
+<p class="meta" id="meta"></p>
+<div class="tw"><table><thead><tr id="hd"></tr></thead><tbody id="tb"></tbody></table></div>
+<div class="pager"><button class="btn" id="pv">Previous</button><span class="meta" id="pg"></span><button class="btn" id="nx">Next</button></div>
+<p class="foot" id="foot"></p>
+</div></div><script charset="utf-8" src="archive_data.js"></script><script charset="utf-8" src="archive.js"></script></body></html>

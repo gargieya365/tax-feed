@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Everything else today</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="app.css"></head><body><div class="page" data-page="everything"><div class="col"><nav class="nav" aria-label="Pages"><a href="index.html">Today</a><a href="everything.html" aria-current="page">Everything else today</a><a href="archive.html">Previous content</a></nav><div class="strip" role="status" aria-live="polite"><div class="strip-row"><span class="strip-name">Daily Tax Brief</span><span class="strip-count" id="count"></span></div><div class="bar" aria-hidden="true"><i id="fill"></i></div></div><header class="hero slim"><p class="date" id="date"></p><h1 class="hero-h" style="font-family:var(--f-display);font-weight:500;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.1;letter-spacing:-.02em">Everything else today</h1><p id="sub"></p></header>
+<div class="sec-h"><h2>All other updates</h2><span class="n" id="n-rest"></span></div>
+<div class="tools"><div class="chips" id="chips"></div><div class="find"><input class="q" id="q" type="search" placeholder="Search party, section or topic" aria-label="Search all updates"><label class="tg"><input type="checkbox" id="unread"> Unread only</label><label class="tg"><input type="checkbox" id="mine"> With my notes or comments</label></div></div>
+<div id="rest"></div><p class="foot" id="foot"></p></div></div><div class="scrim" id="scrim" hidden>
+  <div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-labelledby="d-title" tabindex="-1" data-pane="text">
+    <div class="dh">
+      <div class="dh-top"><div class="kick" id="d-kick"></div><button class="x" id="d-x" type="button" aria-label="Close">&times;</button></div>
+      <h2 id="d-title"></h2>
+      <p class="topic" id="d-topic"></p>
+      <div class="srcs" id="d-srcs"></div>
+    </div>
+    <div class="pane-tabs" id="pane-tabs">
+      <button class="chip" type="button" data-pane="text">Text</button>
+      <button class="chip" type="button" data-pane="notes" id="pt-notes">Notes</button>
+      <button class="chip" type="button" data-pane="comments" id="pt-comments">Comments</button>
+    </div>
+    <div class="dmain">
+      <div class="tpane">
+        <div class="tbar">
+          <div class="seg" role="group" aria-label="View"><button type="button" id="v-struct" aria-pressed="true">Structured</button><button type="button" id="v-raw" aria-pressed="false">As sent</button></div>
+          <span class="hint" id="d-hint">Select text to highlight it or add a note.</span>
+          <div class="selbar" id="selbar" hidden>
+            <span class="sq" id="sq"></span>
+            <button class="sw c1" type="button" data-c="1" aria-label="Highlight yellow" title="Key point"></button>
+            <button class="sw c2" type="button" data-c="2" aria-label="Highlight green" title="Useful for us"></button>
+            <button class="sw c3" type="button" data-c="3" aria-label="Highlight blue" title="To check"></button>
+            <button class="btn" type="button" id="sel-note">Highlight and add note</button>
+          </div>
+        </div>
+        <div class="dbody" id="d-body"><p class="prov" id="d-prov"></p><div class="txt" id="d-txt"></div></div>
+      </div>
+      <aside class="side" id="side">
+        <div class="side-tabs">
+          <button class="chip" type="button" data-pane="notes" id="st-notes">Notes</button>
+          <button class="chip" type="button" data-pane="comments" id="st-comments">Comments</button>
+        </div>
+        <div class="side-body">
+          <section class="panel" id="p-notes">
+            <div><div class="lbl2">My note on this update</div><textarea class="ta" id="note" placeholder="Private note, for example how it applies to a matter" aria-label="My note on this update"></textarea></div>
+            <div><div class="lbl2" id="hl-lbl">Highlights</div></div>
+            <div id="hl-list" style="display:grid;gap:.7rem"></div>
+            <p class="status" id="st-priv"></p>
+          </section>
+          <section class="panel" id="p-comments" hidden>
+            <div class="lbl2" id="c-lbl">Team comments</div>
+            <div id="c-list" style="display:grid;gap:.6rem"></div>
+            <div><textarea class="ta sm" id="c-new" placeholder="Write a comment for the team" aria-label="New comment"></textarea></div>
+            <div class="hlrow"><button class="btn go" type="button" id="c-post">Post comment</button><span class="status" id="c-st"></span></div>
+          </section>
+        </div>
+      </aside>
+    </div>
+    <div class="df">
+      <button class="btn" id="d-prev" type="button">&larr; Previous</button>
+      <button class="btn" id="d-next" type="button">Next &rarr;</button>
+      <span class="pos" id="d-pos"></span>
+      <span class="sp"></span>
+      <a class="link" id="d-url" target="_blank" rel="noopener" hidden>Open on Taxmann</a>
+      <button class="btn" id="d-copy" type="button">Copy text</button>
+      <button class="btn tick" id="d-read" type="button" aria-pressed="false">Mark as read</button>
+    </div>
+  </div>
+</div>
+
+<script charset="utf-8" src="data.js"></script><script charset="utf-8" src="archive_data.js"></script><script charset="utf-8" src="app.js"></script></body></html>
